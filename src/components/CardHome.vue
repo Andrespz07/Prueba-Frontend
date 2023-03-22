@@ -18,7 +18,7 @@ onMounted(async () => {
         <img :src="podcast.image" alt="Podcast image">
         <figcaption>{{ podcast.title.label }}</figcaption>
       </figure>
-      <p>{{ podcast.summary.label }}</p>
+      <p>{{ podcast["im:artist"].label}}</p>
     </div>
   </div>
 </template>
