@@ -6,11 +6,11 @@ const instance = axios.create({
 })
 
 export async function getPodcasts() {
-    const response = await instance.get('/us/rss/toppodcasts/limit=4/genre=1310/json')
+    const response = await instance.get('/us/rss/toppodcasts/limit=100/genre=1310/json')
     const podcasts = response.data.feed.entry.map((podcast) => {
       return {
         ...podcast,
-        image: podcast['im:image'][0].label
+        image: podcast['im:image'][2].label
       }
     })
     return podcasts
